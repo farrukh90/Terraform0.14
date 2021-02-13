@@ -9,3 +9,12 @@ resource "aws_iam_group_membership" "developers_team" {
   ]
   group = aws_iam_group.developers2.name
 }
+
+resource "aws_iam_group" "developers" {
+	name = each.key
+	for_each = toset([
+		"sales",
+		"marketing",
+		"devops",
+		])
+}
