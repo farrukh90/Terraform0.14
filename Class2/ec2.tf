@@ -5,10 +5,8 @@ resource "aws_instance" "web" {
   count = 5
   associate_public_ip_address = true
   availability_zone  = "us-east-1a"
+  vpc_security_group_ids = [aws_security_group.allow_tls.id]
   user_data = file("userdata.sh")
-  
-  
-  
   tags = {
     "Name" = "Farrukh"
   }
