@@ -53,14 +53,11 @@ resource "aws_instance" "web" {
             "sudo yum install httpd -y",
             "sudo systemctl start httpd"
         ]
-
-
-
     connection {
         type     = "ssh"
         user     = "centos"
         private_key = file("~/.ssh/id_rsa")
-        host     = "self"
+        host     = aws_instance.web.public_ip
     }
   }
 }
