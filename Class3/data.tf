@@ -49,7 +49,10 @@ resource "aws_instance" "web" {
     instance_type = "t2.micro"
     key_name = aws_key_pair.deployer3.key_name
     provisioner "remote-exec" {
-        script = file("${path.module}/user.sh")
+        inline  = [
+            "sudo yum install httpd -y",
+            "sudo systemctl start httpd"
+        ]
 
 
 
