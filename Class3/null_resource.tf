@@ -7,7 +7,8 @@ resource "null_resource" "script" {
             "sudo yum install httpd -y",
             "sudo systemctl start httpd",
             "sudo yum install telnet -y",
-            "sudo yum install elinks -y"
+            "sudo yum install elinks -y",
+            "sudo yum remove  telnet -y",
         ]
     connection {
         type     = "ssh"
