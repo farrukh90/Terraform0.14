@@ -18,8 +18,6 @@ output "UBUNTU_ID" {
   value = data.aws_ami.ubuntu.id
 }
 
-
-
 # This line pulls CentOS AMI 
 data "aws_ami" "centos" {
   most_recent = true
