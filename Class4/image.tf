@@ -15,6 +15,24 @@ data "aws_ami" "image" {
 }
 
 
+
+
+
+
+
+
+# data "aws_ami" "company" {
+#   most_recent = true
+#   owners = ["self"] # Canonical
+# }
+
+
+
+
+
+
+
+
 data "aws_availability_zones" "all" {}
 output "AZ" {
   value = data.aws_availability_zones.all.names
