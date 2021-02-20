@@ -6,5 +6,5 @@ variable "key_name" {}
 variable "key_location" {}
 variable "app_name" {}
 variable "ssh_cidr_blocks" {
-    type = list
+  type = list(any)
 }
