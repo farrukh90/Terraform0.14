@@ -1,0 +1,11 @@
+{
+"builders": [{
+      "type": "amazon-ebs",
+      "region": "us-east-1",
+      "source_ami": "ami-02eac2c0129f6376b",
+      "instance_type": "t2.micro",
+      "ssh_username": "centos",
+      "ami_name": "packer-example {{timestamp}}"
+    }]
+}
+  
