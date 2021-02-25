@@ -1,0 +1,42 @@
+{
+    "builders": [{
+    "ami_name": "golden-ami-{{timestamp}}",
+    "ami_users": [
+        "489812928008",
+        "583423934118",
+        "228450838751",
+        "945782535729",
+        "893473806199",
+        "351548338148"
+    ],
+    "instance_type": "t2.micro",
+    "region": "us-east-1",
+    "source_ami_filter": {
+            "filters": {
+            "virtualization-type": "hvm",
+            "name": "CentOS Linux 7 x86_64 HVM EBS ENA 1901_01-b7ee8a69-ee97-4a49-9e68-afaee216db2e-*",
+            "root-device-type": "ebs"
+        },
+    "owners": ["679593333241"],
+    "most_recent": true
+    },
+    "ssh_username": "centos",
+    "ssh_keypair_name": "deployer-key",
+    "ssh_private_key_file": "/home/ec2-user/.ssh/id_rsa",
+    "type": "amazon-ebs"
+    }],
+    "provisioners": [
+        {
+        "type": "shell",
+            "inline":[
+                "sudo yum update -y",
+                "sudo yum install httpd -y",
+                "sudo systemctl start httpd"
+            ]
+        },
+      {
+        "type": "breakpoint",
+        "note": "Wait for you to delete"
+      }
+   ]
+}

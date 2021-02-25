@@ -1,6 +1,20 @@
 {
     "builders": [{
     "ami_name": "golden-ami-{{timestamp}}",
+    "ami_users": [
+        "489812928008",
+        "583423934118",
+        "228450838751",
+        "945782535729",
+        "893473806199",
+        "351548338148"
+    ],
+    "ami_regions": [
+        "us-east-1",
+        "us-east-2",
+        "us-west-1",
+        "eu-west-1"
+    ],
     "instance_type": "t2.micro",
     "region": "us-east-1",
     "source_ami_filter": {
@@ -26,7 +40,7 @@
         {
         "type": "shell",
             "inline":[
-                "sudo yum update -y",
+                "# sudo yum update -y",
                 "sudo yum install httpd -y",
                 "sudo systemctl start httpd",
                 "sudo cp /tmp/r1soft.repo  /etc/yum.repos.d/"
