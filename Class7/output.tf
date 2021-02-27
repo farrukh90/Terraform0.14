@@ -12,6 +12,6 @@ output "DB_NAME" {
 }
 
 
-output "Endpoint" {
+output "endpoint" {
   value = aws_db_instance.default.endpoint
 }
