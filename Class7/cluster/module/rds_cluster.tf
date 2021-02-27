@@ -10,7 +10,7 @@ module "db" {
     allocated_storage   = 20
     storage_type        = "gp2"
     engine              = "mysql"
-    engine_version      = "5.7"
+    engine_version      = "5.7.mysql_aurora.2.07.2"
     instance_class      = "db.t2.micro"
     username            = "foo"
     publicly_accessible = true
@@ -19,20 +19,5 @@ module "db" {
         "50.194.68.231/32",
         "0.0.0.0/0"
     ]
-}
-output region {
-	value = module.db.region
-}
-output subnet_list {
-	value = module.db.subnet_list
-}
-output db_access {
-	value = module.db.db_access
-}
-output DB_NAME {
-	value = module.db.DB_NAME
-}
-output endpoint {
-	value = module.db.endpoint
 }
 
