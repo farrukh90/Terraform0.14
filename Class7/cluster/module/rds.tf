@@ -1,6 +1,3 @@
-# Build RDS Instance
-### Please copy paste below code
-```
 module "db" {
     source = "../"
     region = "us-east-2"
@@ -39,5 +36,3 @@ output endpoint {
 	value = module.db.endpoint
 }
 
-```
-### NOTE:  Password will be created in SSM
