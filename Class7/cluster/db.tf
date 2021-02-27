@@ -15,6 +15,7 @@ resource "aws_rds_cluster" "default" {
 resource "aws_rds_cluster_instance" "cluster_instances" {
   count              = 2
   identifier         = "aurora-cluster-demo-${count.index +1}"
+    publicly_accessible  = var.publicly_accessible
   cluster_identifier = var.identifier
   instance_class     = "db.r4.large"
   engine_version       = var.engine_version
