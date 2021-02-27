@@ -7,7 +7,7 @@ resource "aws_db_instance" "default" {
   instance_class       = var.instance_class
   name                 = var.identifier
   username             = var.username
-  password             = var.password
+  password             = random_password.password.result
   publicly_accessible  = var.publicly_accessible
   db_subnet_group_name = aws_db_subnet_group.db.name
   skip_final_snapshot  = true #used to delete the repo in the future without this you cant delete. There are bugs reported 

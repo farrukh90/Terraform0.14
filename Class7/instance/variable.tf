@@ -27,9 +27,6 @@ variable "instance_class" {
 variable "username" {
 
 }
-variable "password" {
-
-}
 variable "publicly_accessible" {
 
 }
