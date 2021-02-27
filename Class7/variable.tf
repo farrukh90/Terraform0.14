@@ -6,3 +6,30 @@ variable "subnet_ids" {
 variable "db_access" {
   type = list(any)
 }
+variable "identifier" {
+  
+}
+variable "allocated_storage" {
+  
+}
+variable "storage_type" {
+  
+}
+variable "engine" {
+  
+}
+variable "engine_version" {
+  
+}
+variable "instance_class" {
+  
+}
+variable "username" {
+  
+}
+variable "password" {
+  
+}
+variable "publicly_accessible" {
+  
+}
