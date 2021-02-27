@@ -16,7 +16,7 @@
         "eu-west-1"
     ],
     "instance_type": "t2.micro",
-    "region": "us-east-1",
+    "region": "{{ user `region`}}",
     "source_ami_filter": {
             "filters": {
             "virtualization-type": "hvm",
