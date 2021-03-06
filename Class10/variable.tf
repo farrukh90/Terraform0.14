@@ -14,7 +14,7 @@ variable "vm_size" {}
 variable "publisher" {}
 variable "sku" {}
 variable "offer" {}
-# variable "os_version" {}
+variable "os_version" {}
 variable "admin_username" {}
 variable "tags" {
   type = map(string)
