@@ -15,7 +15,7 @@ environment           = "dev"
 publisher      = "OpenLogic"
 offer          = "CentOS"
 sku            = "7.5"
-os_version        = "latest"
+os_version     = "latest"
 admin_username = "centos"
 vm_size        = "Standard_DS1_v2"
 
