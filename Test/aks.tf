@@ -27,8 +27,8 @@ module "aks" {
   resource_group_name              = azurerm_resource_group.example.name
   client_id                        = "your-service-principal-client-appid"
   client_secret                    = "your-service-principal-client-password"
-  kubernetes_version               = "1.20.3"
-  orchestrator_version             = "1.20.3"
+  kubernetes_version               = "1.19.6"
+  orchestrator_version             = "1.19.6"
   prefix                           = "farrukh"          #This should be variablized and changed
   network_plugin                   = "azure"
   vnet_subnet_id                   = module.network.vnet_subnets[0]
