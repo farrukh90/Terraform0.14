@@ -1,13 +1,15 @@
 aks_config = {
-    adgroup_name                   = "AKS-cluster-admins"
+  client_id                        = "your-service-principal-client-appid"
+  client_secret                    = "your-service-principal-client-password"
+  cluster_name                     = "farrukh" #This should be variablized and changed
+
+
+  adgroup_name                     = "AKS-cluster-admins"
   address_space                    = "10.1.0.0/16"
   resource_group_name              = "aks-resource-group"
   location                         = "eastus"
-  client_id                        = "your-service-principal-client-appid"
-  client_secret                    = "your-service-principal-client-password"
   kubernetes_version               = "1.19.6"
   orchestrator_version             = "1.19.6"
-  cluster_name                     = "farrukh" #This should be variablized and changed
   network_plugin                   = "azure"
   os_disk_size_gb                  = 50
   sku_tier                         = "Paid" # defaults to Free
