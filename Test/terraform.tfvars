@@ -1,30 +1,8 @@
-provider "azurerm" {
-  features {}
-}
-
-resource "azurerm_resource_group" "example" {
-  name     = "aks-resource-group"
-  location = "eastus"
-}
-
-module "network" {
-  version             = "3.3.0"
-  source              = "Azure/network/azurerm"
-  resource_group_name = azurerm_resource_group.example.name
-  address_space       = "10.1.0.0/16"
-  subnet_prefixes     = ["10.1.0.0/24"]
-  subnet_names        = ["subnet1"]
-  depends_on          = [azurerm_resource_group.example]
-}
-
-data "azuread_group" "aks_cluster_admins" {
-  display_name = "AKS-cluster-admins"
-}
-
-module "aks" {
-  version                          = "4.8.0"
-  source                           = "Azure/aks/azurerm"
-  resource_group_name              = azurerm_resource_group.example.name
+aks_config = {
+  address_space                    = "10.1.0.0/16"
+  subnet_prefixes                  = ["10.1.0.0/24"]
+  subnet_names                     = ["subnet1"]
+  resource_group_name              = "aks-resource-group"
   client_id                        = "your-service-principal-client-appid"
   client_secret                    = "your-service-principal-client-password"
   kubernetes_version               = "1.19.6"
@@ -48,19 +26,4 @@ module "aks" {
   agents_pool_name                 = "exnodepool"
   agents_availability_zones        = ["1", "2"]
   agents_type                      = "VirtualMachineScaleSets"
-
-  agents_labels = {
-    "nodepool" : "defaultnodepool"
-  }
-
-  agents_tags = {
-    "Agent" : "defaultnodepoolagent"
-  }
-
-  network_policy                 = "azure"
-  net_profile_dns_service_ip     = "10.0.0.10"
-  net_profile_docker_bridge_cidr = "170.10.0.1/16"
-  net_profile_service_cidr       = "10.0.0.0/16"
-
-  depends_on = [module.network]
 }
