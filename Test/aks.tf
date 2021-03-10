@@ -21,6 +21,7 @@ data "azuread_group" "aks_cluster_admins" {
 }
 
 module "aks" {
+    version = "4.8.0"
   source                           = "Azure/aks/azurerm"
   resource_group_name              = azurerm_resource_group.example.name
   client_id                        = "your-service-principal-client-appid"
