@@ -1,7 +1,7 @@
 variable "aks_config" {
   type = map(any)
   default = {
-      adgroup_name                   = "AKS-cluster-admins"
+    adgroup_name                     = "AKS-cluster-admins"
     address_space                    = "10.1.0.0/16"
     resource_group_name              = "example.name"
     location                         = "eastus"
@@ -30,12 +30,12 @@ variable "aks_config" {
 }
 
 variable "subnet_prefixes" {
-    type = list
+  type = list(any)
 }
 
 variable "subnet_names" {
-    type = list
+  type = list(any)
 }
 variable "agents_availability_zones" {
-    type = list
+  type = list(any)
 }
