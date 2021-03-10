@@ -5,6 +5,7 @@ variable "aks_config" {
     subnet_prefixes                  = ["10.1.0.0/24"]
     subnet_names                     = ["subnet1"]
     resource_group_name              = "example.name"
+    location                         = "eastus"
     client_id                        = "your-service-principal-client-appid"
     client_secret                    = "your-service-principal-client-password"
     kubernetes_version               = "1.19.6"

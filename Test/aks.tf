@@ -3,8 +3,8 @@ provider "azurerm" {
 }
 
 resource "azurerm_resource_group" "example" {
-  name     = "aks-resource-group"
-  location = "eastus"
+  name     = var.aks_config["resource_group_name"]
+  location = var.aks_config["location"]
 }
 
 module "network" {
