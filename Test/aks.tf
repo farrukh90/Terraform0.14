@@ -18,7 +18,7 @@ module "network" {
 }
 
 data "azuread_group" "aks_cluster_admins" {
-  name = "AKS-cluster-admins"
+  display_name = "AKS-cluster-admins"
 }
 
 module "aks" {
