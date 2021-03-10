@@ -29,7 +29,7 @@ module "aks" {
   client_secret                    = "your-service-principal-client-password"
   kubernetes_version               = "1.20.3"
   orchestrator_version             = "1.20.3"
-  prefix                           = "farrukh"
+  prefix                           = "farrukh"          #This should be variablized and changed
   network_plugin                   = "azure"
   vnet_subnet_id                   = module.network.vnet_subnets[0]
   os_disk_size_gb                  = 50
