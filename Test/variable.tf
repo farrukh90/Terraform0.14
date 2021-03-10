@@ -1,6 +1,7 @@
 variable "aks_config" {
   type = map(any)
   default = {
+      adgroup_name                   = "AKS-cluster-admins"
     address_space                    = "10.1.0.0/16"
     resource_group_name              = "example.name"
     location                         = "eastus"
