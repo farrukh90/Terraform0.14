@@ -9,7 +9,7 @@ variable "aks_config" {
     client_secret                    = "your-service-principal-client-password"
     kubernetes_version               = "1.19.6"
     orchestrator_version             = "1.19.6"
-    prefix                           = "farrukh" #This should be variablized and changed
+    cluster_name                     = "farrukh" #This should be variablized and changed
     network_plugin                   = "azure"
     os_disk_size_gb                  = 50
     sku_tier                         = "Paid" # defaults to Free
