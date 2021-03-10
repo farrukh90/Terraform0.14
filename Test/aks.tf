@@ -17,9 +17,9 @@ module "network" {
   depends_on          = [azurerm_resource_group.example]
 }
 
-data "azuread_group" "aks_cluster_admins" {
-  display_name = "AKS-cluster-admins"
-}
+# data "azuread_group" "aks_cluster_admins" {
+#   display_name = "AKS-cluster-admins"
+# }
 
 module "aks" {
     version = "4.8.0"
