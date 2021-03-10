@@ -11,8 +11,8 @@ module "network" {
     version = "3.3.0"
   source              = "Azure/network/azurerm"
   resource_group_name = azurerm_resource_group.example.name
-  address_space       = "10.0.0.0/16"
-  subnet_prefixes     = ["10.0.101.0/24"]
+  address_space       = "10.1.0.0/16"
+  subnet_prefixes     = ["10.1.0.0/24"]
   subnet_names        = ["subnet1"]
   depends_on          = [azurerm_resource_group.example]
 }
@@ -60,7 +60,7 @@ module "aks" {
   network_policy                 = "azure"
   net_profile_dns_service_ip     = "10.0.0.10"
   net_profile_docker_bridge_cidr = "170.10.0.1/16"
-  net_profile_service_cidr       = "10.1.0.0/16"
+  net_profile_service_cidr       = "10.0.0.0/16"
 
   depends_on = [module.network]
 }
