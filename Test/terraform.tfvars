@@ -1,6 +1,5 @@
 aks_config = {
   address_space                    = "10.1.0.0/16"
-  subnet_names                     = ["subnet1"]
   resource_group_name              = "aks-resource-group"
   location                         = "eastus"
   client_id                        = "your-service-principal-client-appid"
@@ -27,3 +26,4 @@ aks_config = {
 
 agents_availability_zones        = ["1", "2"]
 subnet_prefixes                  = ["10.1.0.0/24"]
+subnet_names                     = ["subnet1"]

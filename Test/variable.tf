@@ -2,7 +2,6 @@ variable "aks_config" {
   type = map(any)
   default = {
     address_space                    = "10.1.0.0/16"
-    subnet_names                     = "subnet1"
     resource_group_name              = "example.name"
     location                         = "eastus"
     client_id                        = "your-service-principal-client-appid"
@@ -30,6 +29,10 @@ variable "aks_config" {
 }
 
 variable "subnet_prefixes" {
+    type = list
+}
+
+variable "subnet_names" {
     type = list
 }
 variable "agents_availability_zones" {
