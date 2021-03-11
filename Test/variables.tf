@@ -8,6 +8,7 @@ variable "vm_config" {
     machine_type  = "f1-micro"
     image         = "debian-cloud/debian-9"
     firewall_name = "fw-allow-http"
+    network_tags = "web"
   }
 }
 variable "labels" {
