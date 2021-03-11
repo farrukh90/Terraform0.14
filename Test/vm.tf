@@ -22,5 +22,5 @@ resource "google_compute_firewall" "allow-http" {
     protocol = "tcp"
     ports    = ["80"]
   }
-    source_tags  = var.tags
+    source_tags  = "DB"
 }
