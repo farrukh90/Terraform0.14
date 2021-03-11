@@ -7,6 +7,8 @@ vm_config = {
   image         = "debian-cloud/debian-9"
   firewall_name = "fw-allow-http"
   network_tags  = "webserver"
+  filestore_name = "nfsserver"
+  capacity_gb   = 2660
 }
 
 labels = {
