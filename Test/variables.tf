@@ -13,10 +13,10 @@ variable "vm_config" {
 variable "labels" {
   type = list(any)
   default = {
-  "name", "db",
-  "env", "dev",
-  "team", "devops",
-  "quarter", "first",
-  "builtby", "me",
+    name = "db",
+    env = "dev",
+    team =  "devops",
+    quarter = "first",
+    builtby = "me",
   }
 }
