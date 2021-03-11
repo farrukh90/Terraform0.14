@@ -14,9 +14,9 @@ resource "google_filestore_instance" "instance" {
       squash_mode = "NO_ROOT_SQUASH"
    }
 
-  networks {
-    network = "default"
-    modes   = ["MODE_IPV4"]
-  }
+  # networks {
+  #   network = "default"
+  #   modes   = ["MODE_IPV4"]
+  # }
 }
 }
