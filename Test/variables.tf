@@ -10,13 +10,13 @@ variable "vm_config" {
     firewall_name = "fw-allow-http"
   }
 }
-variable "tags" {
+variable "labels" {
   type = list(any)
-  default = [
+  default = {
   "name", "db",
   "env", "dev",
   "team", "devops",
   "quarter", "first",
   "builtby", "me",
-  ]
+  }
 }
