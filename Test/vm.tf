@@ -12,7 +12,7 @@ resource "google_compute_instance" "vm_instance" {
     }
   }
   labels = var.labels
-  tags = var.vm_config["network_tags"]
+  tags = [var.vm_config["network_tags"]]
 }
 
 
@@ -23,5 +23,5 @@ resource "google_compute_firewall" "allow-http" {
     protocol = "tcp"
     ports    = ["80"]
   }
-  source_tags = var.vm_config["network_tags"]
+  source_tags = [var.vm_config["network_tags"]]
 }
