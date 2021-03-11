@@ -8,7 +8,7 @@ firewall_name = "fw-allow-http"
 tags = [
   "name", "db",
   "env", "dev",
-  "team", "devOps",
-  "quarter", "1",
-  "built_by", "me",
+  "team", "devops",
+  "quarter", "first",
+  "builtby", "me",
 ]
