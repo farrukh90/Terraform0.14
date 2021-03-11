@@ -12,5 +12,8 @@ resource "google_compute_instance" "vm_instance" {
     }
   }
   labels = var.labels
-  tags = [var.vm_config["network_tags"]]
+  tags   = [var.vm_config["network_tags"]]
+  metadata = {
+    ssh-keys = "debian:${file("~/.ssh/id_rsa.pub")}"
+  }
 }
