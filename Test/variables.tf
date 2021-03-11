@@ -11,7 +11,7 @@ variable "vm_config" {
   }
 }
 variable "labels" {
-  type = list(any)
+  type = map
   default = {
     name = "db",
     env = "dev",
