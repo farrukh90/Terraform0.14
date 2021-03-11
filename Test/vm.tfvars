@@ -9,7 +9,6 @@ vm_config = {
   network_tags  = "webserver"
 }
 
-
 labels = {
   name    = "db"
   env     = "dev"
