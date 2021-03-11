@@ -10,7 +10,7 @@ variable "vm_config" {
     firewall_name = "fw-allow-http"
     network_tags  = "web"
     filestore_name     = "nfsserver"
-    capacity_gb   = 2660
+    capacity_gb   = 1024
     tier          = "BASIC_HDD"
   }
 }
