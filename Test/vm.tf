@@ -11,6 +11,7 @@ resource "google_compute_instance" "vm_instance" {
     access_config {
     }
   }
+  tags = var.tags
 }
 
 
@@ -21,4 +22,6 @@ resource "google_compute_firewall" "allow-http" {
     protocol = "tcp"
     ports    = ["80"]
   }
+    tags = var.tags
+
 }
