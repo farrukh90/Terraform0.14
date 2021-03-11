@@ -19,3 +19,4 @@ resource "google_filestore_instance" "instance" {
     modes   = ["MODE_IPV4"]
   }
 }
+}
