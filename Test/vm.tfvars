@@ -9,6 +9,7 @@ vm_config = {
   network_tags  = "webserver"
   filestore_name = "nfsserver"
   capacity_gb   = 2660
+  tier          = "BASIC_SSD"
 }
 
 labels = {
