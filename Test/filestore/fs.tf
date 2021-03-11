@@ -7,7 +7,7 @@ resource "google_filestore_instance" "instance" {
 
   file_shares {
     capacity_gb = var.fs_config["capacity_gb"]
-    name        = "share1"
+    name        = var.fs_config["file_share_name"]
     nfs_export_options {
       ip_ranges   = ["0.0.0.0/0"]
       access_mode = "READ_WRITE"

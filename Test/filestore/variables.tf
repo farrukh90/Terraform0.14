@@ -7,6 +7,7 @@ variable "fs_config" {
     filestore_name = "nfsserver"
     capacity_gb    = 1024
     tier           = "BASIC_HDD"
+    file_share_name = "share1"
   }
 }
 variable "labels" {
