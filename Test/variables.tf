@@ -13,10 +13,10 @@ variable "vm_config" {
 variable "tags" {
   type = list(any)
   default = [
-    "Name", "DB",
-    "Env", "Dev",
-    "Team", "DevOps",
-    "Quarter", "1",
-    "Built_by", "Me",
+  "name", "db",
+  "env", "dev",
+  "team", "devOps",
+  "quarter", "1",
+  "built_by", "me",
   ]
 }
