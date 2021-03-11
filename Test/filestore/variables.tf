@@ -11,7 +11,7 @@ variable "vm_config" {
     network_tags  = "web"
     filestore_name     = "nfsserver"
     capacity_gb   = 2660
-    tier          = "BASIC_SSD"
+    tier          = "BASIC_HDD"
   }
 }
 variable "labels" {
