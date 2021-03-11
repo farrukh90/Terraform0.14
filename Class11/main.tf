@@ -1,7 +1,7 @@
 module "aks" {
   source                       = "farrukh90/aks/azure"
   cluster_name                 = "example-aks1"
-  kubernetes_version           = "1.18.4"
+  kubernetes_version           = "1.18.14"
   node_pool_name               = "node1"
   min_count                    = "1"
   max_count                    = "1"
