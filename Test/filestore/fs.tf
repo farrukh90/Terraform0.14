@@ -1,4 +1,6 @@
 resource "google_filestore_instance" "instance" {
+      provider = google-beta
+
   name = var.vm_config["filestore_name"]
   zone = var.vm_config["zone"]
   tier = var.vm_config["tier"]
