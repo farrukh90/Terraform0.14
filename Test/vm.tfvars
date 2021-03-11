@@ -6,9 +6,9 @@ machine_type  = "f1-micro"
 image         = "debian-cloud/debian-9"
 firewall_name = "fw-allow-http"
 labels = {
-    name = "db",
-    env = "dev",
-    team =  "devops",
-    quarter = "first",
-    builtby = "me",
+    name = "db"
+    env = "dev"
+    team =  "devops"
+    quarter = "first"
+    builtby = "me"
 }
