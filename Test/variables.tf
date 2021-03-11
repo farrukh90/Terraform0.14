@@ -11,11 +11,11 @@ variable "vm_config" {
   }
 }
 variable "labels" {
-  type = map
+  type = map(any)
   default = {
-    name = "db"
-    env = "dev"
-    team =  "devops"
+    name    = "db"
+    env     = "dev"
+    team    = "devops"
     quarter = "first"
     builtby = "me"
   }
