@@ -17,8 +17,8 @@ resource "google_compute_security_policy" "policy" {
     match {
       expr {
         expression = "
-        origin.region_code == 'CN' && 
-        origin.region_code == 'RU' &&
+        origin.region_code == 'CN' && \n
+        origin.region_code == 'RU' && \n
         origin.region_code == 'UA' &&
         "
       }
