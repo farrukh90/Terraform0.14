@@ -1,7 +1,7 @@
 resource "google_dns_record_set" "this" {
   name         = "${var.config["dns_record"]}.${google_dns_managed_zone.this.dns_name}"
-  type         = "A"
-  ttl          = 60
+  type         = var.config["type"]
+  ttl          = var.config["ttl"]
   managed_zone = google_dns_managed_zone.this.name
   rrdatas      = [var.config["rrdatas"]]
 }
