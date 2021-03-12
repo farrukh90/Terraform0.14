@@ -11,7 +11,6 @@ resource "google_compute_security_policy" "policy" {
     }
     description = "Deny access to IPs"
   }
-  
   rule {
     action   = "deny(404)"
     priority = "1001"
