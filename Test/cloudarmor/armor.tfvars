@@ -8,8 +8,8 @@ blacklisted_ips = [
 ]
 
 blacklisted_ips = [
-    "origin.blacklisted_countries == 'CN'", 
-    "origin.blacklisted_countries == 'UA'",
-    "origin.blacklisted_countries == 'RU'",
+    "origin.region_code == 'CN'", 
+    "origin.region_code == 'UA'",
+    "origin.region_code == 'RU'",
 ]
     
