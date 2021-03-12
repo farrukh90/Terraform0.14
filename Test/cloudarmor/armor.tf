@@ -6,7 +6,7 @@ resource "google_compute_security_policy" "policy" {
     match {
       versioned_expr = "SRC_IPS_V1"
       config {
-        src_ip_ranges = [var.blacklisted_ips]
+        src_ip_ranges = var.blacklisted_ips
       }
     }
     description = "Deny access to IPs"
