@@ -31,7 +31,7 @@ resource "google_compute_security_policy" "policy" {
     match {
       expr {
         expression {
-          region_code == "CN"
+          region_code = "CN"
         }
       }
     }
