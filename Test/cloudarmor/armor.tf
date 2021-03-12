@@ -16,7 +16,7 @@ resource "google_compute_security_policy" "policy" {
     priority = "1001"
     match {
       expr {
-        expression = "${join(" && ", var.region_code)}"
+        expression = join(" && ", var.region_code)
       }
     }
     description = "Blacklisted Countries"
