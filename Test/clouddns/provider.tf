@@ -1,3 +1,3 @@
 provider "google" {
-  project = var.vm_config["project"]
+  project = var.config["project"]
 }
