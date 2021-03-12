@@ -7,7 +7,7 @@ resource "google_compute_security_policy" "policy" {
     match {
       versioned_expr = "SRC_IPS_V1"
       config {
-        origin.region_code == "CN"
+        src_ip_ranges = ["9.9.9.0/24"]
       }
     }
     description = "Deny access to IPs in 9.9.9.0/24"
