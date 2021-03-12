@@ -29,7 +29,9 @@ resource "google_compute_security_policy" "policy" {
     action   = "allow"
     priority = "2147483647"
     match {
-      region_code = "CN"
+      expr {
+        region_code = "CN"
+      }
     }
     description = "default rule"
   }
