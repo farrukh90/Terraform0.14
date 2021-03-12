@@ -16,7 +16,11 @@ resource "google_compute_security_policy" "policy" {
     priority = "1001"
     match {
       expr {
-        expression = "origin.region_code == 'CN' && origin.region_code == 'RU'"
+        expression = "
+        origin.region_code == 'CN' && 
+        origin.region_code == 'RU' &&
+        origin.region_code == 'UA' &&
+        "
       }
     }
     description = "blacklist China"
