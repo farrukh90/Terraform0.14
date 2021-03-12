@@ -11,17 +11,12 @@ variable blacklisted_ips {
     "9.9.1.0/24"
   ]
 }
-variable countries {
-  default = "CN"
-}
-
-
-variable region_code {
+variable blacklisted_countries {
   type = list 
   default = [ 
-    "origin.region_code == 'CN'", 
-    "origin.region_code == 'UA'",
-    "origin.region_code == 'RU'",
+    "origin.blacklisted_countries == 'CN'", 
+    "origin.blacklisted_countries == 'UA'",
+    "origin.blacklisted_countries == 'RU'",
   ]
 }
  

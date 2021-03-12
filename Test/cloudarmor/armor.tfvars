@@ -6,4 +6,10 @@ blacklisted_ips = [
     "9.9.9.0/24",
     "9.9.1.0/24"
 ]
-countries = "CN"
+
+blacklisted_ips = [
+    "origin.blacklisted_countries == 'CN'", 
+    "origin.blacklisted_countries == 'UA'",
+    "origin.blacklisted_countries == 'RU'",
+]
+    
