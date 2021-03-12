@@ -1,3 +1,3 @@
 config = {
-  project    = "ckad-302703"
+  project = "ckad-302703"
 }
