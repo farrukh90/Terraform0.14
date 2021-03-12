@@ -27,7 +27,7 @@ resource "google_compute_security_policy" "policy" {
 
   rule {
     action   = "allow"
-    priority = "2147483647"
+    priority = "2147483646"
     match {
       expr {
         expression = "origin.region_code == CN"
