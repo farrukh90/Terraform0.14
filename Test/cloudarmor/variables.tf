@@ -12,5 +12,5 @@ variable blacklisted_ips {
   ]
 }
 variable china {
-  default = "CN"
+  default = 'CN'
 }
