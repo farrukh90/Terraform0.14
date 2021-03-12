@@ -1,15 +1,15 @@
-resource "google_dns_record_set" "wordpress" {
-  name         = "wordpress.${google_dns_managed_zone.wordpress.dns_name}"
+resource "google_dns_record_set" "this" {
+  name         = "${var.config["dns_record"]}.${google_dns_managed_zone.this.dns_name}"
   type         = "A"
   ttl          = 60
-  managed_zone = google_dns_managed_zone.wordpress.name
-  rrdatas      = ["127.0.0.1"]
+  managed_zone = google_dns_managed_zone.this.name
+  rrdatas      = [var.config["rrdatas"]]
 }
-resource "google_dns_managed_zone" "wordpress" {
-  name     = "wordpress"
-  dns_name = "acirrustech.net."
+resource "google_dns_managed_zone" "this" {
+  name     = var.config["dns_record"]
+  dns_name = var.config["dns_name"]
 }
 
-output wordpress_urls {
-  value       = google_dns_record_set.wordpress.name
+output "urls" {
+  value = google_dns_record_set.this.name
 }
