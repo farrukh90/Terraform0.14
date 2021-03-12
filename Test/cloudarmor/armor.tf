@@ -13,7 +13,7 @@ resource "google_compute_security_policy" "policy" {
   }
   rule {
     action   = "deny(404)"
-    priority = "1000"
+    priority = "1001"
     match {
       expr {
         expression = "origin.region_code == 'CN'"
