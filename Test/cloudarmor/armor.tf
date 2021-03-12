@@ -19,7 +19,7 @@ resource "google_compute_security_policy" "policy" {
         expression = "origin.region_code == 'CN'"
       }
     }
-    description = "default rule"
+    description = "blacklist China"
   }
   rule {
     action   = "allow"
