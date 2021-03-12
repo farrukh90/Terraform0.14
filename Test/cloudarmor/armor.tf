@@ -2,7 +2,7 @@ resource "google_compute_security_policy" "policy" {
   name = "my-policy"
   rule {
     action   = "allow"
-    priority = "2147483647"
+    priority = "1000"
     match {
       versioned_expr = "SRC_IPS_V1"
       config {
@@ -11,7 +11,7 @@ resource "google_compute_security_policy" "policy" {
     }
     description = "default rule"
   }
-  
+
   rule {
     action   = "deny(403)"
     priority = "2147483645"
