@@ -19,7 +19,7 @@ resource "google_compute_security_policy" "policy" {
         expression = "
         origin.region_code == 'CN' && \n
         origin.region_code == 'RU' && \n
-        origin.region_code == 'UA' &&
+        origin.region_code == 'UA' && \n
         "
       }
     }
