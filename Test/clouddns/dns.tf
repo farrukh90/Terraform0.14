@@ -9,3 +9,7 @@ resource "google_dns_managed_zone" "wordpress" {
   name     = "wordpress"
   dns_name = "acirrustech.net."
 }
+
+output wordpress_urls {
+  value       = google_dns_record_set.wordpress.name
+}
