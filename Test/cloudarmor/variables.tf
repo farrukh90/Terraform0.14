@@ -14,3 +14,14 @@ variable blacklisted_ips {
 variable countries {
   default = "CN"
 }
+
+
+variable region_code {
+  type = list 
+  default = [ 
+    "origin.region_code = 'CN'", 
+    "origin.region_code = 'UA'",
+    "origin.region_code = 'RU'",
+  ]
+}
+ 
