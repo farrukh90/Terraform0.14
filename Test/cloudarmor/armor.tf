@@ -26,7 +26,7 @@ resource "google_compute_security_policy" "policy" {
   }
 
   rule {
-    action   = "deny"
+    action   = "deny(404)"
     priority = "2147483646"
     match {
       expr {
