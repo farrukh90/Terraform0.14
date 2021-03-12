@@ -6,10 +6,10 @@ resource "google_compute_security_policy" "policy" {
     match {
       versioned_expr = "SRC_IPS_V1"
       config {
-        src_ip_ranges = ["9.9.9.0/24"]
+        src_ip_ranges = [var.blacklisted_ips]
       }
     }
-    description = "Deny access to IPs in 9.9.9.0/24"
+    description = "Deny access to IPs"
   }
   rule {
     action   = "deny(404)"
