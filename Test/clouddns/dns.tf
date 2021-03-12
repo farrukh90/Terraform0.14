@@ -7,5 +7,5 @@ resource "google_dns_record_set" "wordpress" {
 }
 resource "google_dns_managed_zone" "wordpress" {
   name     = "wordpress"
-  dns_name = "acirrustech.net."
+  dns_name = "acirrustech.net"
 }
