@@ -15,8 +15,8 @@ resource "google_billing_budget" "budget" {
 
   amount {
     specified_amount {
-      currency_code = "USD"
-      units         = "20"
+      currency_code = var.config["currency_code"]
+      units         = var.config["units"]
     }
   }
 
