@@ -9,26 +9,26 @@ check-envs :
 		echo "ENVIRONMENT must be set; export ENVIRONMENT"; exit 1; \
 	fi
 
-tf-init : check-envs
+i : check-envs
 	terraform init -upgrade
 	terraform get -update
 
 	terraform workspace select $(ENVIRONMENT) || \
 		terraform workspace new $(ENVIRONMENT)
 
-tf-plan : tf-init
+p : i
 	terraform plan \
 		-var-file=envs/$(ENVIRONMENT).tfvars \
 		-out=$(ENVIRONMENT).tfplan
 
-tf-apply : tf-init
+a : i
 	terraform apply $(ENVIRONMENT).tfplan
 
-tf-destroy : tf-init
+tf-destroy : i
 	terraform destroy \
 		-var-file=envs/$(ENVIRONMENT).tfvars
 
-tf-validate : tf-init
+tf-validate : i
 	terraform validate
 
 tf-fmt-check :
