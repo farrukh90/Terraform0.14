@@ -1,8 +1,8 @@
-tfi:
+i:
 		terraform init
 
-tfp:
+p:
 		terraform plan 
-		
-tfa: 
+
+a:
 		terraform apply
