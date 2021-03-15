@@ -24,18 +24,15 @@ p : i
 a : i
 	terraform apply $(ENVIRONMENT).tfplan
 
-tf-destroy : i
+destroy : i
 	terraform destroy \
 		-var-file=envs/$(ENVIRONMENT).tfvars
 
-tf-validate : i
+v : i
 	terraform validate
 
-tf-fmt-check :
-	terraform fmt -check
-
-tf-fmt :
+f :
 	terraform fmt -recursive
 
-tf-clean : check-fmt
+c : f
 	rm -rf {*.tfstate.d,.terraform,*.tfplan}
