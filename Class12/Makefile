@@ -6,3 +6,9 @@ p:
 
 a:
 		terraform apply
+
+v:
+		terraform validate
+
+f:
+		terraform fmt -recursive
