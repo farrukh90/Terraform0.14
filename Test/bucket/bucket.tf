@@ -11,7 +11,7 @@ provider "google" {
   region  = var.bucket_config["region"]
 }
 resource "google_storage_bucket" "default" {
-  name          = var.bucket_config["name"]
+  name          = var.bucket_config["bucket_name"]
   location      = var.bucket_config["region"]
   storage_class = "REGIONAL"
   force_destroy = false
