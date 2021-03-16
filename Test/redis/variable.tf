@@ -13,7 +13,7 @@ variable "config" {
     redis_version           = "REDIS_4_0"
     display_name            = "Terraform Test Instance"
     # List of Labels
-    my_key                  = "my_val"
-    other_key               = "other_val"
+    my_key    = "my_val"
+    other_key = "other_val"
   }
 }
