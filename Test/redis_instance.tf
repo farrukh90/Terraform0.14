@@ -7,7 +7,6 @@ resource "google_redis_instance" "cache" {
   authorized_network = "default"
   redis_version     = "REDIS_4_0"
   display_name      = "Terraform Test Instance"
-  reserved_ip_range = "192.168.0.0/29"
   labels = {
     my_key    = "my_val"
     other_key = "other_val"
