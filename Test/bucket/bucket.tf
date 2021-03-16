@@ -20,6 +20,13 @@ resource "google_storage_bucket" "default" {
       type          = "DELETE"
       storage_class = "REGIONAL"
     }
+    condition {
+      age                   = 60
+      created_before        = 2017-06-13
+      with_state            = "ANY"
+      matches_storage_class = ["REGIONAL"]
+      num_newer_versions    = 10
+    }
   }
 }
 
