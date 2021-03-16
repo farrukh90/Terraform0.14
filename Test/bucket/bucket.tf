@@ -17,7 +17,7 @@ resource "google_storage_bucket" "default" {
   force_destroy = false
   lifecycle_rule {
     action {
-      type          = "DELETE"
+      type          = "SetStorageClass"
       storage_class = "REGIONAL"
     }
     condition {
