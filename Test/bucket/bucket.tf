@@ -1,12 +1,3 @@
-variable "bucket_config" {
-  type = map(any)
-  default = {
-    project         = "ckad-302703"
-    bucket_name     = "bucket-terraform-farrukh"
-    region          = "us-central1"
-    storage_class   = "REGIONAL"
-  }
-}
 provider "google" {
   project = var.bucket_config["project"]
   region  = var.bucket_config["region"]
