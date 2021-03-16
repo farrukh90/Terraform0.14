@@ -4,6 +4,7 @@ variable "bucket_config" {
     project         = "ckad-302703"
     bucket_name     = "bucket-terraform-farrukh"
     region          = "us-central1"
+    storage_class   = "REGIONAL"
   }
 }
 provider "google" {
@@ -13,12 +14,12 @@ provider "google" {
 resource "google_storage_bucket" "default" {
   name          = var.bucket_config["bucket_name"]
   location      = var.bucket_config["region"]
-  storage_class = "REGIONAL"
+  storage_class = var.bucket_config["storage_class"]
   force_destroy = false
   lifecycle_rule {
     action {
       type          = "SetStorageClass"
-      storage_class = "REGIONAL"
+      storage_class = var.bucket_config["storage_class"]
     }
     condition {
       age                   = 60
