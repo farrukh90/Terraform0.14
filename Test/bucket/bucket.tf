@@ -10,7 +10,7 @@ resource "google_storage_bucket" "default" {
   lifecycle_rule {
     action {
       type          = "SetStorageClass"
-      storage_class = var.bucket_config["storage_class"]
+      storage_class = "REGIONAL"
     }
     condition {
       age                   = 60
