@@ -17,15 +17,8 @@ resource "google_storage_bucket" "default" {
   force_destroy = var.force_destroy
   lifecycle_rule {
     action {
-      type          = var.action_type
-      storage_class = var.action_storage_class
-    }
-    condition {
-      age                   = var.age
-      created_before        = var.created_before
-      with_state            = var.with_state
-      matches_storage_class = var.matches_storage_class
-      num_newer_versions    = var.num_newer_versions
+      type          = "DELETE"
+      storage_class = "REGIONAL"
     }
   }
 }
