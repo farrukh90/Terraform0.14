@@ -1,13 +1,13 @@
 module "vpc" {
   source        = "farrukh90/vpc/aws"
-  region        = "us-east-1"
-  vpc_cidr      = "10.0.0.0/16"
-  public_cidr1  = "10.0.1.0/24"
-  public_cidr2  = "10.0.2.0/24"
-  public_cidr3  = "10.0.3.0/24"
-  private_cidr1 = "10.0.101.0/24"
-  private_cidr2 = "10.0.102.0/24"
-  private_cidr3 = "10.0.103.0/24"
+  region        = var.config["region"]
+  vpc_cidr      = var.config["vpc_cidr"]
+  public_cidr1  = var.config["public_cidr1"]
+  public_cidr2  = var.config["public_cidr2"]
+  public_cidr3  = var.config["public_cidr3"]
+  private_cidr1 = var.config["private_cidr1"]
+  private_cidr2 = var.config["private_cidr2"]
+  private_cidr3 = var.config["private_cidr3"]
   tags = {
     Name        = "VPC_Project"
     Environment = "Dev"
