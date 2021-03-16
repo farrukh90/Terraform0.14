@@ -9,11 +9,11 @@ module "vpc" {
   private_cidr2 = var.config["private_cidr2"]
   private_cidr3 = var.config["private_cidr3"]
   tags = {
-    Name        = "VPC_Project"
-    Environment = "Dev"
-    Team        = "DevOps"
-    Created_by  = "Farrukh"
-    Department  = "IT"
-    Bill        = "CFO"
+    Name        = var.config["Name"]
+    Environment = var.config["Environment"]
+    Team        = var.config["Team"]
+    Created_by  = var.config["Created_by"]
+    Department  = var.config["Department"]
+    Bill        = var.config["Bill"]
   }
 }
