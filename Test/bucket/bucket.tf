@@ -14,14 +14,6 @@ provider "google" {
 resource "google_storage_bucket" "bucket" {
   name          = var.bucket_config["bucket_name"]
   force_destroy = true
-  storage_class = "REGIONAL"
-  lifecycle_rule {
-    condition {
-      age = 3
-    }
-    action {
-      type = "Delete"
-    }
-  }
+  
 }
 
