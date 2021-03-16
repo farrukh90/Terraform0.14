@@ -1,9 +1,9 @@
 resource "google_compute_disk" "default" {
-  name = "test-disk"
-  type = "pd-ssd"
-  zone = "us-central1-a"
-  size = 5
+  name = var.config["name"]
+  type = var.config["type"]
+  zone = var.config["zone"]
+  size = var.config["size"]
   labels = {
-    environment = "dev"
+    environment = var.config["environment"]
   }
 }
