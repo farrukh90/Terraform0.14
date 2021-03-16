@@ -1,14 +1,14 @@
 resource "google_redis_instance" "cache" {
-  name           = "ha-memory-cache"
-  tier           = "STANDARD_HA"
-  memory_size_gb = 1
-  location_id             = "us-central1-a"
-  alternative_location_id = "us-central1-f"
-  authorized_network = "default"
-  redis_version     = "REDIS_4_0"
-  display_name      = "Terraform Test Instance"
+  name                    = var.config["name"]
+  tier                    = var.config["tier"]
+  memory_size_gb          = var.config["memory_size_gb"]
+  location_id             = var.config["location_id"]
+  alternative_location_id = var.config["alternative_location_id"]
+  authorized_network      = var.config["authorized_network"]
+  redis_version           = var.config["redis_version"]
+  display_name            = var.config["display_name"]
   labels = {
-    my_key    = "my_val"
-    other_key = "other_val"
+    my_key    = var.config["my_key"]
+    other_key = var.config["other_key"]
   }
 }
